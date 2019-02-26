@@ -14,11 +14,12 @@
 		// Your code goes here. 
 		// Do not change any other code in this file
 		// All of the steps below must be achieved using JavaScript!
-		document.querySelector("h1").textContent = "Joseph";
+		document.querySelector("h1").innerHTML = "Joseph";
 
-		document.getElementById("URL").textContent = document.baseURI;
-		document.getElementById("items").textContent = document.getElementsByTagName("li");
-		document.getElementById("time").textContent = new Date();
+		document.getElementById("URL").innerHTML = document.baseURI;
+		var list1 = document.getElementsByTagName("li");
+		document.getElementById("items").innerHTML = list1.length;
+		document.getElementById("time").innerHTML = new Date();
 
 		document.querySelector("*").style.background = "yellow";
 		document.querySelector("*").style.margin = "3%";
@@ -30,10 +31,11 @@
 		*/
 	}
 	function copyFunction(){
-		document.getElementById("cheer").textContent = "GO BLUE";
+		document.getElementById("cheer").innerHTML += "GO BLUE<br>";
 
 	}
 </script>
+
 <style>
 p{
 	background-color: #b3b3b3;
@@ -70,9 +72,11 @@ p{
 		<li>California State University Long Beach</li>
 		<li oncopy="copyFunction()">University of Michigan</li>
 	</ul>
+
 	<div id="cheer">
 
 	</div>
+
 </main>
 
 </body>
